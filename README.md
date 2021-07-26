@@ -33,27 +33,31 @@ Also, The memorylessness feature of exponential distribution state that every da
 
 ## Model 
 Let D be the days to Dropout
-$$D_{i}|dropout==1 \sim Exponential(\lambda_{i})$$
-$$D_{i}|dropout==0 \sim Exponential-CCDF(\lambda_{i})$$
+
+<img src="https://render.githubusercontent.com/render/math?math=D_{i}|dropout==1 \sim Exponential(\lambda_{i})">
+
+<img src="https://render.githubusercontent.com/render/math?math=D_{i}|dropout==0 \sim Exponential-CCDF(\lambda_{i})">
+
 where,
-$$\lambda_{i}= exp(\alpha_{[far]}+  \beta_{[bus]}) $$
+
+<img src="https://render.githubusercontent.com/render/math?math=\lambda_{i}=exp(\alpha_{[far]}+ \beta_{[bus]})">
 
 For students who have dropped out its just Exponential liklihood function but for students who have not yet dropped out we can incorporate their information using Exponential CCDF which is just the cummulative complementry of Exponential. For example we asking two different questions for the same answer for plian Exponential the question is  what is the probability of student dropping out at day 25 and for Exponential CCDF we are asking what is the probability of student dropping out given a student is still enrolling. 
 We can further explore these topics mathematically.
 The above notation can be further written as
-$$\begin{Bmatrix}
- & e^{-\lambda *t} & &if dropout=0 \\ 
- & \lambda * e^{-\lambda *t}& &if dropout==1
-\end{Bmatrix}$$
-<div><img src="fig//expon.png" width="820"  class="inline"> </div>
 
+<img src="https://latex.codecogs.com/gif.latex?%5Cbegin%7BBmatrix%7D%20%26%20e%5E%7B-%5Clambda%20*t%7D%20%26%20%26if%20dropout%3D0%20%5C%5C%20%26%20%5Clambda%20*%20e%5E%7B-%5Clambda%20*t%7D%26%20%26if%20dropout%3D%3D1%20%5Cend%7BBmatrix%7D">
+
+
+
+<div><img src="fig//expon.png" width="820"  class="inline"> </div>
 
 We also want to control for weather students live far or not so that we want to know that is there stil some strong association between bus service and dropout.
 
 ## Priors
 Priors are your beliefs about our parameters before seeing the data. It’s just a way of telling our model that what is infinity and whats not. You can also incorporate your expert beliefs, findings you’re your previous studies or even some sensible reasoning about your parameter into your prior.
 
-In this example, we are estimating the Dropout Rate of each student per day i.e parameter  $(\lambda)$. Before even seeing the data we can have some reasoning about this parameter; even though we can’t exactly estimate what value $(\lambda)$ can take right now but we know what values it cannot take. For instance, imagine $(\lambda)$ is 0.50 or more i.e dropout rate of each student per day is 50 % more; we know for certain that no school can even think of running a successful business with that dropout rate until and unless it’s into some serious money-laundering. Of course, we can do far  better than that but even a simple restriction can improve our model’s estimation because our model does not have to go look for impossible infinite space. We want $(\lambda)$ to fall under 0.5 and increase our beliefs as we move below.
+In this example, we are estimating the Dropout Rate of each student per day i.e parameter  <img src ="https://render.githubusercontent.com/render/math?math=(\lambda)">. Before even seeing the data we can have some reasoning about this parameter; even though we can’t exactly estimate what value <img src ="https://render.githubusercontent.com/render/math?math=(\lambda)"> can take right now but we know what values it cannot take. For instance, imagine <img src ="https://render.githubusercontent.com/render/math?math=(\lambda)"> is 0.50 or more i.e dropout rate of each student per day is 50 % more; we know for certain that no school can even think of running a successful business with that dropout rate until and unless it’s into some serious money-laundering. Of course, we can do far  better than that but even a simple restriction can improve our model’s estimation because our model does not have to go look for impossible infinite space. We want <img src ="https://render.githubusercontent.com/render/math?math=(\lambda)"> to fall under 0.5 and increase our beliefs as we move below.
 
 But our beliefs should to converted into mathematical notation for our model to make sense. And, Eliciting priors especially on these kinds of Generalized Linear Models(glms) is tricky because we have morphed the parameters using some link function to our glms. Therefore it’s always suggested plotting the priors. 
 
@@ -62,16 +66,19 @@ But our beliefs should to converted into mathematical notation for our model to 
 *Fig: Prior Predective simulations for 3 different beliefs*
 
 
-The plot in the middle exactly goes with our beliefs as you can see from the fig (*bottom-mid*) our beliefs about the dropout-rate $(\lambda)$  fall under 0.5 and the mass increases as we move below
+The plot in the middle exactly goes with our beliefs as you can see from the fig (*bottom-mid*) our beliefs about the dropout-rate <img src ="https://render.githubusercontent.com/render/math?math=(\lambda)">  fall under 0.5 and the mass increases as we move below
 The middle plot exactly goes with our belief
 
-$$\alpha \sim Normal(1,1.5) $$
-$$\beta \sim Normal(1,1.5) $$
+<img src ="https://render.githubusercontent.com/render/math?math=\alpha\sim Normal(1,1.5)"> 
+
+
+
+</break>
+<img src ="https://render.githubusercontent.com/render/math?math=\beta \sim Normal(1,1.5)">
 
 where,
 
-$$\lambda_{i}= exp(\alpha_{[far]}+  \beta_{[bus]}) $$
-
+<img src ="https://render.githubusercontent.com/render/math?math=\lambda_{i}= exp(\alpha_{[far]}+  \beta_{[bus]})">
 
 
 
