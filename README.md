@@ -78,13 +78,14 @@ The middle plot exactly goes with our belief
 
 where,
 
-<img src ="https://render.githubusercontent.com/render/math?math=\lambda_{i}= exp(\alpha_{[far]}+  \beta_{[bus]})">
+<img src ="https://render.githubusercontent.com/render/math?math=\lambda_{i}= exp(\alpha_{[far]}+ \beta_{[bus]})">
 
 
 
 ## Statistcal Question
 What is the average difference in dropout rates for students who uses bus and who doesnot uses bus across all far far students ?
 
+## Findings
 =
 ## Conclusion
 
@@ -98,5 +99,5 @@ School arranges bus service to those students which are *far* and most but not a
 
 Each Day each parents may be disatisfied with school mainly aggregrated 3 sources. first Disputes from some Unknown sources. second disputes from being far and third disputes from School's Bus service. this Disatisfaction is not measured and is not in our dataset; however the information of disatisfaction flows towards student's drop out rate.
 
-And just like in any other system of disatisfaction and disputes if handled properly they are resolved else it increases and stacks until some unfortunate events for our case drop out.
+And just like in any other system of disatisfaction and disputes if the administration handled properly they are resolved else it stacks and grows until such disputes takes into the forms of drop-outs
 
