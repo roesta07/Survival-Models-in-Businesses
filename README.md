@@ -1,3 +1,8 @@
+# Rate of an Event Evaluation
+*Keywords: Operations/Administration, Probabilistic Model, Bayesian Statistics, Python, Pymc3*
+
+
+
 ## Introduction
 ___
 Businesses are often interested to know about the rate at which their customers enroll and quit. It is through these rates any business decides upon its customer retention strategies and evaluates lifetime values from each customer
@@ -21,7 +26,7 @@ But *this is a mistake* and can cause ***biased estimates*** because the student
 
 This is confusing, but one loose example to understand this can be simple as; the probability of head gives us information about probability tail as they are *complementary* of each other.
 
-<div><img src="desc.png//expon.png" width="820"  class="inline"> </div>
+<div><img src="fig//desc.png" width="820"  class="inline"> </div>
 
 *Fig:student's enroll/dropout status*
 
@@ -103,6 +108,7 @@ In the table below; summary of the posterior
 |  lambb\|far,bus           |   0.003	            |   0	    |0.003      |0.003      |
 
 *Table:Paramete Summary*
+
 These parameters can be further explained with the help of a graph;
 <div><img src="fig//posterior.png" width="820"  class="inline"> </div>
 
@@ -111,7 +117,7 @@ These parameters can be further explained with the help of a graph;
 From the graph above; Our guess was true; there is something wrong with our Bus Administration. Among far-students, those who use the bus tend to drop out early from school than those who do not.
 Also, we can see that the uncertainty is less among students who use the bus: why? Because more students who live far tends to use bus service rather than manage transportation by self.
 ### Conclusion
-But the point of all this is to make an Inference; although there is a quite noticeable difference of almost a year between these two groups, it’s not a good idea to point all the fingers towards bus administration. Science is not this simple especially with these observational data, there can be a lot of factors and confounders affecting the measure of our interest and can have some paradoxical effect on the findings we know now. But we are now closer to truth and we know where to start now; at least we can have some good discussions with our bus administration and further investigate. 
+But the point of all this is to make an Inference; although there is a quite noticeable difference of about a year between these two groups, it’s not a yet a good idea to point all the fingers towards bus administration. Science is not this simple ean specially with these observational data, there can be a lot of factors and confounders affecting the measure of our interest. After inclusion of such information we might have some paradoxical effect on the findings we know now. But we are now closer to the truth and we know where to start now; at least we can have some good discussions with our bus administration and further investigate. 
 
 ## Generative Model
 I have used this cartoonish version to explain how the data is being generated and simulated under certain stated assumptions below.
