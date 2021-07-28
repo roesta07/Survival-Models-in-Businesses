@@ -1,6 +1,7 @@
-# Rate of an Event Evaluation
-*Keywords: Operations/Administration, Probabilistic Model, Bayesian Statistics, Python, Pymc3*
-
+# Evaluating Rate of an Event 
+*A simple Business case*
+---
+*Keywords: Operations/Administration, Causal Model, Probabilistic Model, Bayesian Statistics, Python, Pymc3*
 
 
 ## Introduction
