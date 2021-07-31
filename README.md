@@ -125,7 +125,7 @@ I have used this cartoonish version to explain how the data is being generated a
 
 <div><img src="fig//dag1.png" width="820"  class="inline"> </div>
 
-*Fig:Directed Acyclic Graph*
+*Fig:Directed Acyclic Graph. Note that the nodes that are shaded light are unmeasured variables in this case; but the fact that its unmeasured doesnot mean that it doesnot exists*
 
 * Each year during admission sessions students get admitted to the School through some Poisson process.
 We expect *70% of students to be within a 5 km* radius from the school's location and the rest 30% beyond the 5 km radius represented with variable *far*.
